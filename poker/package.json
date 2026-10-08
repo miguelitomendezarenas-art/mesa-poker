@@ -1,0 +1,14 @@
+{
+  "name": "mesa-poker",
+  "version": "1.0.0",
+  "description": "Texas Hold'em de 6 asientos para jugar con amigos (local u online)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node server/test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  }
+}
