@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de póker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="lobby">
+  <form id="lobbyForm">
+    <h1>Mesa de póker</h1>
+    <p>Texas Hold'em · 6 asientos</p>
+    <label>Tu nombre <input id="name" maxlength="16" required autocomplete="off"></label>
+    <label>Código de mesa <input id="room" maxlength="12" required autocomplete="off"></label>
+    <button type="submit">Entrar a la mesa</button>
+    <small>Tus amigos entran con el mismo código de mesa.</small>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header>
+    <div><b id="roomLabel"></b> <span id="blindsLabel"></span></div>
+    <button id="muteBtn" type="button" title="Sonido">🔊</button>
+    <button id="copyLink" type="button">Copiar enlace</button>
+    <button id="startBtn" type="button" hidden>Iniciar partida</button>
+    <button id="standBtn" type="button" hidden>Levantarme</button>
+  </header>
+  <main>
+    <section id="tableWrap">
+      <div id="table">
+        <div id="center">
+          <div id="potChips"></div>
+          <div id="pot"></div>
+          <div id="community"></div>
+          <div id="banner"></div>
+        </div>
+        <div id="seats"></div>
+        <div id="bets"></div>
+        <div id="fx"></div>
+      </div>
+      <div id="actions"></div>
+    </section>
+    <aside>
+      <div id="log"></div>
+      <div id="chat"></div>
+      <form id="chatForm"><input id="chatInput" maxlength="200" placeholder="Escribe un mensaje" autocomplete="off"><button>Enviar</button></form>
+    </aside>
+  </main>
+</div>
+<div id="toast" role="status"></div>
+<script src="client.js"></script>
+</body>
+</html>
